@@ -29,12 +29,14 @@ public class IntegerCounter {
      } 
       
 
-     public String toString(int count) { 
-         if (count>0){
+     public String toString() { 
+         for(int i=0; i<100; i++){
+         if (counters[i]>0){
              String line;
-             line = counters[]
+             line = i +": " + counters[i] +"\n";
          
          return ""; 
+         }
          }
          return "";
      } 
