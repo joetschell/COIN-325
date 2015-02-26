@@ -29,7 +29,13 @@ public class IntegerCounter {
      } 
       
 
-     public String toString() { 
+     public String toString(int count) { 
+         if (count>0){
+             String line;
+             line = counters[]
+         
          return ""; 
+         }
+         return "";
      } 
 }
