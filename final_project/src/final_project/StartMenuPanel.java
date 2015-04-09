@@ -34,44 +34,23 @@ public class StartMenuPanel extends JPanel{
     public JLabel mHangmanImageLabel;
     public ImageIcon mGallows; 
     public JLabel mGallowsLabel;
-    public char[] mWord = {'A', 'P', 'p', 'L', 'E'};
+    
     public ImageIcon mUnderscore; 
     public JLabel mUnderscoreLabel;
     public ImageIcon mUnderscore2; 
     public JLabel mUnderscoreLabel2;
     public JPanel mGamePanel;
-    public JButton mAButton;
-    public JButton mBButton;
-    public JButton mCButton;
-    public JButton mDButton;
-    public JButton mEButton;
-    public JButton mFButton;
-    public JButton mGButton;
-    public JButton mHButton;
-    public JButton mIButton;
-    public JButton mJButton;
-    public JButton mKButton;
-    public JButton mLButton;
-    public JButton mMButton;
-    public JButton mNButton;
-    public JButton mOButton;
-    public JButton mPButton;
-    public JButton mQButton;
-    public JButton mRButton;
-    public JButton mSButton;
-    public JButton mTButton;
-    public JButton mUButton;
-    public JButton mVButton;
-    public JButton mWButton;
-    public JButton mXButton;
-    public JButton mYButton;
-    public JButton mZButton;
-   
     
+    //Only do this if there will be only one!
+    //private static StartMenuPanel mInstance;
+    
+   
+    //public static StartMenuPanel getInstance(){ return mInstance;}
     public StartMenuPanel(){
       
        
        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+       //mInstance = this;
       
         GamePanel mGamePanel = new GamePanel();
         
@@ -91,32 +70,8 @@ public class StartMenuPanel extends JPanel{
         mUnderscore2 = new ImageIcon("imgs/underscore.png");
         mUnderscoreLabel2 = new JLabel();
         mUnderscoreLabel2.setIcon(mUnderscore2);
-        mAButton = new JButton();
-        mBButton = new JButton("B");
-        mCButton = new JButton("C");
-        mDButton = new JButton("D");
-        mEButton = new JButton("E");
-        mFButton = new JButton("F");
-        mGButton = new JButton("G");
-        mHButton = new JButton("H");
-        mIButton = new JButton("I");
-        mJButton = new JButton("J");
-        mKButton = new JButton("K");
-        mLButton = new JButton("L");
-        mMButton = new JButton("M");
-        mNButton = new JButton("N");
-        mOButton = new JButton("O");
-        mPButton = new JButton("P");
-        mQButton = new JButton("Q");
-        mRButton = new JButton("R");
-        mSButton = new JButton("S");
-        mTButton = new JButton("T");
-        mUButton = new JButton("U");
-        mVButton = new JButton("V");
-        mWButton = new JButton("W");
-        mXButton = new JButton("X");
-        mYButton = new JButton("Y");
-        mZButton = new JButton("Z");
+        
+        
         
         mClose.addActionListener(new CloseButtonListener());
         mNewGame.addActionListener(new NewGameListener(this));
@@ -170,38 +125,16 @@ public class StartMenuPanel extends JPanel{
            
            //int space = 200;
            //for(int i=0; i<mWord.length; i++){
-           this.mStartMenuPanel.add(mUnderscoreLabel);
-           mUnderscoreLabel.setAlignmentY(BOTTOM_ALIGNMENT);
+           //this.mStartMenuPanel.add(mUnderscoreLabel);
+           //mUnderscoreLabel.setAlignmentY(BOTTOM_ALIGNMENT);
          // mUnderscoreLabel.setAlignmentX();
            //space += 25;
 //         this.mStartMenuPanel.add(mUnderscoreLabel2);
 //          mUnderscoreLabel2.setAlignmentX(RIGHT_ALIGNMENT);
 //          
-           this.mStartMenuPanel.add(mAButton);
-           this.mStartMenuPanel.add(mBButton);
-           this.mStartMenuPanel.add(mCButton);
-           this.mStartMenuPanel.add(mCButton);
-           this.mStartMenuPanel.add(mEButton);
-           this.mStartMenuPanel.add(mFButton);
-           this.mStartMenuPanel.add(mGButton);
-           this.mStartMenuPanel.add(mHButton);
-           this.mStartMenuPanel.add(mJButton);
-           this.mStartMenuPanel.add(mKButton);
-           this.mStartMenuPanel.add(mLButton);
-           this.mStartMenuPanel.add(mMButton);
-           this.mStartMenuPanel.add(mNButton);
-           this.mStartMenuPanel.add(mOButton);
-           this.mStartMenuPanel.add(mPButton);
-           this.mStartMenuPanel.add(mQButton);
-           this.mStartMenuPanel.add(mRButton);
-           this.mStartMenuPanel.add(mSButton);
-           this.mStartMenuPanel.add(mTButton);
-           this.mStartMenuPanel.add(mUButton);
-           this.mStartMenuPanel.add(mVButton);
-           this.mStartMenuPanel.add(mWButton);
-           this.mStartMenuPanel.add(mXButton);
-           this.mStartMenuPanel.add(mYButton);
-           this.mStartMenuPanel.add(mZButton);
+           this.mStartMenuPanel.add(new BlanksPanel());
+           this.mStartMenuPanel.add(new KeyboardPanel());
+        
           
            
            }
