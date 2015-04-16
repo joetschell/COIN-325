@@ -27,7 +27,7 @@ public class BlanksPanel extends JPanel{
     
     public int count=0;
     public JPanel mPanel;
-    public char[] mWord = {'A', 'P', 'p', 'L', 'E'};
+    public char[] mWord = {'A', 'P', 'P', 'L', 'E'};
     public JLabel[] mBlanks;
     
     public BlanksPanel(){
@@ -36,21 +36,20 @@ public class BlanksPanel extends JPanel{
         
         this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         mUnderscore = new ImageIcon("imgs/underscore.png");
-        mUnderscoreLabel = new JLabel();
-        mUnderscoreLabel.setIcon(mUnderscore);
-        mUnderscore2 = new ImageIcon("imgs/underscore.png");
-        mUnderscoreLabel2 = new JLabel();
-        mUnderscoreLabel2.setIcon(mUnderscore2);
-        mBlanks = new JLabel[20];
+        
+         mBlanks = new JLabel[20];
         
         
         for(int i = 0; i< 20; i++){
+            mUnderscoreLabel = new JLabel();
+            mUnderscoreLabel.setIcon(mUnderscore);
             mBlanks[i]=(mUnderscoreLabel);
             
         }
         
         for(int i = 0; i<mWord.length; i++){
             add(mBlanks[i]);
+            
             
         } 
         
