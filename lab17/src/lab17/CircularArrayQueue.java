@@ -35,6 +35,7 @@ public class CircularArrayQueue<T> implements Queue<T> {
          mQueue[mRear] = element; 
          mRear = (mRear + 1) % mQueue.length; 
          mCount++; 
+         
      } 
  
  
@@ -44,9 +45,10 @@ public class CircularArrayQueue<T> implements Queue<T> {
              throw new EmptyCollectionException();
          } 
          
-             T result = mQueue[mRear-mCount];
-             mQueue[mRear]=null;
+             T result = mQueue[mFront];
+             mQueue[mFront]=null;
              mCount--;
+             mFront = (mFront+1) % mQueue.length;
          
          return result;
      } 
@@ -58,7 +60,7 @@ public class CircularArrayQueue<T> implements Queue<T> {
              throw new EmptyCollectionException();
          } 
          
-            T result = mQueue[mRear-mCount];
+            T result = mQueue[mFront];
             return result;
        
      } 
