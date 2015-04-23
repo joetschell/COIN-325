@@ -40,6 +40,7 @@ public class HashLinkedChaining<K, V> implements Hash<K,V> {
      @Override 
      public V get(K key) { 
          V ret; 
+         
          if (key == null) { 
              return null; 
          } 
@@ -47,11 +48,18 @@ public class HashLinkedChaining<K, V> implements Hash<K,V> {
          LinkedList<HashNode<K,V>> list = (LinkedList<HashNode<K,V>>) 
                  mTable[Math.abs(key.hashCode()) % mTable.length]; 
           
-         ret = list.get(key.hashCode()).getValue(); 
+         for(int i = 0; i<mCount; i++){
+             
+        
+         if (list.get(i).getKey() == key){
+             ret=list.get(i).getValue();
+             return ret;
+         }
          
-         
+         }
+         return null;
           
-         return ret; 
+         
      } 
  
  

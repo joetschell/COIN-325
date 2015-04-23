@@ -17,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author jschell157503
  */
-public class HashTester {
+public class HashTest {
     
-    public HashTester() {
+    public HashTest() {
     }
     
     @BeforeClass
@@ -59,10 +59,10 @@ public class HashTester {
          
          assertTrue(hash.get("123-45-6789Vulcan").getBDay().equals("01-01-2000")); 
          assertTrue(hash.get("123-45-6000Human").getBDay().equals("01-01-2263")); 
-         assertTrue(hash.get("123-45-5000Human").getBDay().equals("01-02-2263")); 
+         assertTrue(hash.get("123-45-5000Human").getBDay().equals("01-02-2263"));
           
          
      } 
- } 
 
 
+}
