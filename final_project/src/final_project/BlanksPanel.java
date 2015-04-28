@@ -5,15 +5,8 @@
  */
 
 package final_project;
-import javax.swing.JButton; 
- import java.awt.Dimension; 
  import javax.swing.JLabel; 
  import javax.swing.JPanel; 
- import java.awt.event.ActionEvent;  
- import java.awt.event.ActionListener;  
- import java.util.Random; 
-import java.awt.*;
-import static java.awt.Component.BOTTOM_ALIGNMENT;
 import javax.swing.*;
 /**
  *
@@ -30,11 +23,14 @@ public class BlanksPanel extends JPanel{
     public char[] mWord = {'A', 'P', 'P', 'L', 'E'};
     public JLabel[] mBlanks;
     
+    public JLabel mALabel;
     public BlanksPanel(){
       
-      
+        
+        
         
         this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+        
         mUnderscore = new ImageIcon("imgs/underscore.png");
         
          mBlanks = new JLabel[20];
@@ -52,7 +48,9 @@ public class BlanksPanel extends JPanel{
             
             
         } 
-        
+        mALabel = new JLabel("A");
+        //add(mALabel);
+         
         
         
     }

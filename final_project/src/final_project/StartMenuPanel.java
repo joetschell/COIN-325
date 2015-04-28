@@ -41,6 +41,7 @@ public class StartMenuPanel extends JPanel{
     public JLabel mUnderscoreLabel2;
     public JPanel mGamePanel;
     
+   public JLabel mALabel;
     //Only do this if there will be only one!
     //private static StartMenuPanel mInstance;
     
@@ -61,15 +62,13 @@ public class StartMenuPanel extends JPanel{
         mHangmanImage = new ImageIcon("imgs/noose.jpg");
         mHangmanImageLabel = new JLabel();
         mHangmanImageLabel.setIcon(mHangmanImage);
-        mGallows = new ImageIcon("imgs/gallows.gif");
-        mGallowsLabel = new JLabel();
-        mGallowsLabel.setIcon(mGallows);
         mUnderscore = new ImageIcon("imgs/underscore.png");
         mUnderscoreLabel = new JLabel();
         mUnderscoreLabel.setIcon(mUnderscore);
         mUnderscore2 = new ImageIcon("imgs/underscore.png");
         mUnderscoreLabel2 = new JLabel();
         mUnderscoreLabel2.setIcon(mUnderscore2);
+        
         
         
         
@@ -82,7 +81,7 @@ public class StartMenuPanel extends JPanel{
         add(mNewGame);
         add(mClose);
         
-        
+       
         mTitle.setAlignmentX(CENTER_ALIGNMENT);
         mHangmanImageLabel.setAlignmentX(CENTER_ALIGNMENT);
         mClose.setAlignmentX(CENTER_ALIGNMENT);
@@ -120,25 +119,14 @@ public class StartMenuPanel extends JPanel{
            mHangmanImageLabel.setVisible(false);
            mTitle.setVisible(false);
            mStartMenuPanel.removeAll();
-           this.mStartMenuPanel.add(mGallowsLabel);
-           mGallowsLabel.setAlignmentX(LEFT_ALIGNMENT);
+          
            
-           //int space = 200;
-           //for(int i=0; i<mWord.length; i++){
-           //this.mStartMenuPanel.add(mUnderscoreLabel);
-           //mUnderscoreLabel.setAlignmentY(BOTTOM_ALIGNMENT);
-         // mUnderscoreLabel.setAlignmentX();
-           //space += 25;
-//         this.mStartMenuPanel.add(mUnderscoreLabel2);
-//          mUnderscoreLabel2.setAlignmentX(RIGHT_ALIGNMENT);
-//          
-           this.mStartMenuPanel.add(new BlanksPanel());
            this.mStartMenuPanel.add(new KeyboardPanel());
         
           
            
            }
         }
-        
-    }
-
+}
+    
+    
