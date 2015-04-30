@@ -1,0 +1,14 @@
+I could have made a method for when the player got a correct guess instead of making a listener for each button that was correct.
+Also this way the program would have worked for more than just the word "APPLE."  I'm really not too sure of much else I could
+have done to reuse code or simplify what I did.  I did use a lot of buttons and labels and image icons so if there is a way to 
+perhaps make a for loop to keep creating buttons while still keeping the names of them separate I could have done so.  Most of
+my code was just creating components to add to the panels that I made and setting up listeners for them.  Since java and android
+have a different way of making new components, it was near impossible to copy and reuse code from java to android in making 
+these components.  I could have set it up to where the user inputs a character from the alphabet and then gone through a for loop
+to see if the letter they entered was in the word and for each instance of that letter make it appear on the screen.  If the
+for loop didn't find any instance of the letter then I could have added a body part to the hangman image. 
+This way there would not have been any buttons to make for each letter of the alphabet and would have allowed me to use far less
+code and far less to write in the xml file.   I think in my case it is more a matter of writing less code 
+to begin with rather than reusing code. 
+
+
