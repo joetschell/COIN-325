@@ -1,0 +1,12 @@
+I had to add in JLabels and JImageIcons for each of the underscores under each of the letters
+I also had to do the same for adding each new body part to the gallows. I made a new image
+and set a label to that image for each new body part that was added to the hangman.  I ended up
+not using the continuePrevious() method because I did not know how to save progress from a game
+that was started and not completed all the way.  I put the main class to run the program on its 
+own instead of having it as a part of the StartMenu class as well.  I added integer variables to
+keep track of how the correct number of guesses and incorrect number of guesses so the program
+would know when the user won (when the number of correct guesses equals the length of the word)
+and the when the user lost (when the number of incorrect guesses matched the number of body
+parts). I hard coded separate listeners for all the buttons that were correct guesses due to time 
+restraints and for the buttons that were incorrect guesses I had one listener since it did 
+not matter what letter it was as long as it wasn't a letter that was in the word.  

@@ -16,7 +16,7 @@ import javax.swing.JFrame;
          JFrame frame = new JFrame("Hangman"); 
          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
          StartMenuPanel smp = new StartMenuPanel(); 
-         GamePanel gp = new GamePanel();
+         
          
          frame.add(smp); 
          //frame.add(gp);

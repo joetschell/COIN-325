@@ -53,7 +53,7 @@ public class StartMenuPanel extends JPanel{
        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
        //mInstance = this;
       
-        GamePanel mGamePanel = new GamePanel();
+    
         
         mTitle = new JLabel("Hangman");
         mNewGame = new JButton("New Game");
